@@ -11,6 +11,8 @@
 		991C56EB2C1898F00045C1B6 /* AllSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56E92C1898F00045C1B6 /* AllSurveyCell.swift */; };
 		991C56EC2C1898F00045C1B6 /* AllSurveyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56EA2C1898F00045C1B6 /* AllSurveyCellModel.swift */; };
 		991C56EE2C1899A30045C1B6 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56ED2C1899A30045C1B6 /* UITableView+Ext.swift */; };
+		991C57042C18D6E70045C1B6 /* CategorySurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C57022C18D6E70045C1B6 /* CategorySurveyCell.swift */; };
+		991C57052C18D6E70045C1B6 /* CategorySurveyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C57032C18D6E70045C1B6 /* CategorySurveyCellModel.swift */; };
 		99445C6B2C186A01002D8D6A /* UIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 99445C6A2C186A01002D8D6A /* UIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99445CCA2C1890BE002D8D6A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99445CC82C1890BE002D8D6A /* CategoryCell.swift */; };
 		99445CCB2C1890BE002D8D6A /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99445CC92C1890BE002D8D6A /* CategoryCellModel.swift */; };
@@ -22,6 +24,8 @@
 		991C56E92C1898F00045C1B6 /* AllSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSurveyCell.swift; sourceTree = "<group>"; };
 		991C56EA2C1898F00045C1B6 /* AllSurveyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSurveyCellModel.swift; sourceTree = "<group>"; };
 		991C56ED2C1899A30045C1B6 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		991C57022C18D6E70045C1B6 /* CategorySurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySurveyCell.swift; sourceTree = "<group>"; };
+		991C57032C18D6E70045C1B6 /* CategorySurveyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySurveyCellModel.swift; sourceTree = "<group>"; };
 		99445C672C186A01002D8D6A /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99445C6A2C186A01002D8D6A /* UIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponents.h; sourceTree = "<group>"; };
 		99445CC82C1890BE002D8D6A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -66,10 +70,28 @@
 		991C56E82C1898E40045C1B6 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				991C57012C18D6CE0045C1B6 /* CategorySurvey */,
+				991C57002C18D6C80045C1B6 /* AllSurvey */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		991C57002C18D6C80045C1B6 /* AllSurvey */ = {
+			isa = PBXGroup;
+			children = (
 				991C56E92C1898F00045C1B6 /* AllSurveyCell.swift */,
 				991C56EA2C1898F00045C1B6 /* AllSurveyCellModel.swift */,
 			);
-			path = TableView;
+			path = AllSurvey;
+			sourceTree = "<group>";
+		};
+		991C57012C18D6CE0045C1B6 /* CategorySurvey */ = {
+			isa = PBXGroup;
+			children = (
+				991C57022C18D6E70045C1B6 /* CategorySurveyCell.swift */,
+				991C57032C18D6E70045C1B6 /* CategorySurveyCellModel.swift */,
+			);
+			path = CategorySurvey;
 			sourceTree = "<group>";
 		};
 		99445C5D2C186A01002D8D6A = {
@@ -242,12 +264,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				991C56EB2C1898F00045C1B6 /* AllSurveyCell.swift in Sources */,
+				991C57052C18D6E70045C1B6 /* CategorySurveyCellModel.swift in Sources */,
 				99445CCA2C1890BE002D8D6A /* CategoryCell.swift in Sources */,
 				99445CCF2C1891E9002D8D6A /* UICollectionView+Ext.swift in Sources */,
 				99445CCB2C1890BE002D8D6A /* CategoryCellModel.swift in Sources */,
 				991C56EE2C1899A30045C1B6 /* UITableView+Ext.swift in Sources */,
 				99445CD22C18920A002D8D6A /* ReusableView.swift in Sources */,
 				991C56EC2C1898F00045C1B6 /* AllSurveyCellModel.swift in Sources */,
+				991C57042C18D6E70045C1B6 /* CategorySurveyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

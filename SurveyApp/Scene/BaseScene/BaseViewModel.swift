@@ -8,32 +8,27 @@
 import Foundation
 import Utilities
 import UIKit
+import UIComponents
 
 protocol BaseViewModelDataSource:AnyObject{}
 
-protocol BaseViewModelEventSource:AnyObject{
-    //MARK: Loading Indicator Closures
-    var enableLoadingClosure:VoidClosure {get set}
-    var disableLoadingClosure:VoidClosure {get set}
-}
+protocol BaseViewModelEventSource:AnyObject{}
 
 protocol BaseViewModelProtocol:BaseViewModelDataSource,BaseViewModelEventSource{}
 
 
 class BaseViewModel<R:Router>:BaseViewModelProtocol{
     
-    var enableLoadingClosure: VoidClosure = {
-    }
-    
-    var disableLoadingClosure: VoidClosure = {
-        
-    }
+    var categoryKey: CategoryKeys?
     
     var router:R
+    
+    var addedModel: AllSurveyCellModel?
    
-    init(router: R) {
+    init(router: R,categoryKey: CategoryKeys? = nil,model:AllSurveyCellModel? = nil) {
         self.router = router
+        self.categoryKey = categoryKey
+        self.addedModel = model
     }
-    
-    
+
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		92D039E2A31FFB74A5299E91 /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF158F5193D57430A773E77B /* Pods_SurveyApp.framework */; };
+		991C56FB2C18D14E0045C1B6 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56F82C18D14E0045C1B6 /* CategoryRouter.swift */; };
+		991C56FC2C18D14E0045C1B6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56F92C18D14E0045C1B6 /* CategoryViewController.swift */; };
+		991C56FD2C18D14E0045C1B6 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56FA2C18D14E0045C1B6 /* CategoryViewModel.swift */; };
+		991C56FF2C18D1630045C1B6 /* CategoryRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56FE2C18D1630045C1B6 /* CategoryRoute.swift */; };
 		99445C4A2C1862BD002D8D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99445C492C1862BD002D8D6A /* AppDelegate.swift */; };
 		99445C532C1862BF002D8D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99445C522C1862BF002D8D6A /* Assets.xcassets */; };
 		99445C562C1862BF002D8D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99445C542C1862BF002D8D6A /* LaunchScreen.storyboard */; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		4503E10D614A71918FCC9B51 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
+		991C56F82C18D14E0045C1B6 /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		991C56F92C18D14E0045C1B6 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		991C56FA2C18D14E0045C1B6 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		991C56FE2C18D1630045C1B6 /* CategoryRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRoute.swift; sourceTree = "<group>"; };
 		99445C462C1862BD002D8D6A /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99445C492C1862BD002D8D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99445C522C1862BF002D8D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +122,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		991C56F72C18D1400045C1B6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				991C56F82C18D14E0045C1B6 /* CategoryRouter.swift */,
+				991C56F92C18D14E0045C1B6 /* CategoryViewController.swift */,
+				991C56FA2C18D14E0045C1B6 /* CategoryViewModel.swift */,
+				991C56FE2C18D1630045C1B6 /* CategoryRoute.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		99445C3D2C1862BD002D8D6A = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +174,7 @@
 		99445C862C186D96002D8D6A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				991C56F72C18D1400045C1B6 /* Category */,
 				99445CBD2C18739D002D8D6A /* Home */,
 				99445CAE2C186FFA002D8D6A /* Splash */,
 				99445C9B2C186EEB002D8D6A /* BaseScene */,
@@ -381,18 +401,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991C56FC2C18D14E0045C1B6 /* CategoryViewController.swift in Sources */,
 				99445CC32C1873A5002D8D6A /* HomeViewModel.swift in Sources */,
 				99445C932C186E9E002D8D6A /* AppRouter.swift in Sources */,
 				99445C4A2C1862BD002D8D6A /* AppDelegate.swift in Sources */,
 				99445C952C186EAF002D8D6A /* PlaceOnWindowTransition.swift in Sources */,
+				991C56FF2C18D1630045C1B6 /* CategoryRoute.swift in Sources */,
 				99445CB32C187003002D8D6A /* SplashViewController.swift in Sources */,
 				99445CC12C1873A5002D8D6A /* HomeRouter.swift in Sources */,
+				991C56FD2C18D14E0045C1B6 /* CategoryViewModel.swift in Sources */,
 				99445CB72C187010002D8D6A /* SplashRoute.swift in Sources */,
 				99445C912C186E76002D8D6A /* CoreRouter.swift in Sources */,
 				99445C982C186EC6002D8D6A /* PushTransition.swift in Sources */,
 				99445CA02C186F2E002D8D6A /* BaseViewController.swift in Sources */,
 				99445C9E2C186F25002D8D6A /* BaseViewModel.swift in Sources */,
 				99445CB42C187003002D8D6A /* SplashViewModel.swift in Sources */,
+				991C56FB2C18D14E0045C1B6 /* CategoryRouter.swift in Sources */,
 				99445CC22C1873A5002D8D6A /* HomeViewController.swift in Sources */,
 				99445C8C2C186E44002D8D6A /* AppDelegate+IQKeyboard.swift in Sources */,
 				99445CA42C186F4A002D8D6A /* BaseNavigationController.swift in Sources */,

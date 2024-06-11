@@ -29,15 +29,15 @@ protocol HomeViewProtocol: HomeViewDataSource, HomeViewEventSource {
 
 final class HomeViewModel: BaseViewModel<HomeRouter>, HomeViewProtocol {
     
-    private let totalVoters = 50
+    static let totalVoters = 50
     
     var reloadTableView: VoidClosure?
     
     private var items:[CategoryCellProtocol] = [
-        CategoryCellModel(title: "Health", icon: .init(systemName: "stethoscope.circle.fill")!),
-        CategoryCellModel(title: "Sport", icon: .init(systemName: "figure.gymnastics")!),
-        CategoryCellModel(title: "Love", icon: .init(systemName: "heart.fill")!),
-        CategoryCellModel(title: "Tech", icon: .init(systemName: "keyboard")!)
+        CategoryCellModel(categoryKey: .health, title: "Health", icon: .init(systemName: "stethoscope.circle.fill")!),
+        CategoryCellModel(categoryKey: .sport, title: "Sport", icon: .init(systemName: "figure.gymnastics")!),
+        CategoryCellModel(categoryKey: .love, title: "Love", icon: .init(systemName: "heart.fill")!),
+        CategoryCellModel(categoryKey: .tech, title: "Tech", icon: .init(systemName: "keyboard")!)
     ]
     
     private var tableItems: [AllSurveyCellProtocol] = []
@@ -53,11 +53,13 @@ extension HomeViewModel{
     
     private func configTableItems(){
         tableItems = [
-            AllSurveyCellModel(title: "Healht", surveyImage: .init(systemName: "stethoscope.circle.fill")!, subtitle: "Chickens are Really Healthy?", voterCount: self.totalVoters, voteCount: 12),
-            AllSurveyCellModel(title: "Love", surveyImage: .init(systemName: "heart.fill")!, subtitle: "Long Distance Relationship is better?", voterCount: self.totalVoters, voteCount: 24),
-            AllSurveyCellModel(title: "Tech", surveyImage: .init(systemName: "stethoscope.circle.fill")!, subtitle: "The Best Programming Lang is Swift?", voterCount: self.totalVoters, voteCount: 6),
-            AllSurveyCellModel(title: "Love", surveyImage: .init(systemName: "stethoscope.circle.fill")!, subtitle: "Women Loves Tall man?", voterCount: self.totalVoters, voteCount: 40)
+            AllSurveyCellModel(categoryKey: .health, surveyImage: .init(systemName: "stethoscope.circle.fill")!, subtitle: "Chickens are Really Healthy?", voterCount: HomeViewModel.totalVoters, voteCount: 12),
+            AllSurveyCellModel(categoryKey: .love, surveyImage: .init(systemName: "heart.fill")!, subtitle: "Long Distance Relationship is better?", voterCount: HomeViewModel.totalVoters, voteCount: 24),
+            AllSurveyCellModel(categoryKey: .tech, surveyImage: .init(systemName: "stethoscope.circle.fill")!, subtitle: "The Best Programming Lang is Swift?", voterCount: HomeViewModel.totalVoters, voteCount: 6),
+            AllSurveyCellModel(categoryKey: .love, surveyImage: .init(systemName: "stethoscope.circle.fill")!, subtitle: "Women Loves Tall man?", voterCount: HomeViewModel.totalVoters, voteCount: 40)
         ]
+        guard let model = addedModel else {return}
+        tableItems.append(model)
     }
     
 }
@@ -90,9 +92,9 @@ extension HomeViewModel{
 extension HomeViewModel{
     
     func didCollectionAction(indexPath: IndexPath) {
-        print("clciked \(indexPath.row)")
+        let item = cellItemAt(indexPath: indexPath)
+        router.pushCategory(categoryKey: item.categoryKey)
     }
-    
     
     func agreeButtonAction(indexPath: IndexPath) {
         tableItems[indexPath.row].voteCount += 1

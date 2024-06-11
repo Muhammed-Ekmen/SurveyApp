@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991C56F62C18CFDF0045C1B6 /* CategoryKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C56F52C18CFDF0045C1B6 /* CategoryKeys.swift */; };
 		99445C7F2C186A1E002D8D6A /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99445C7E2C186A1E002D8D6A /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99445CA62C186FA5002D8D6A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99445CA52C186FA5002D8D6A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		991C56F52C18CFDF0045C1B6 /* CategoryKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryKeys.swift; sourceTree = "<group>"; };
 		99445C7B2C186A1E002D8D6A /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99445C7E2C186A1E002D8D6A /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		99445CA52C186FA5002D8D6A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -28,6 +30,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		991C56F42C18CFD60045C1B6 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				991C56F52C18CFDF0045C1B6 /* CategoryKeys.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
 		99445C712C186A1E002D8D6A = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +57,7 @@
 		99445C7D2C186A1E002D8D6A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				991C56F42C18CFD60045C1B6 /* Keys */,
 				99445C7E2C186A1E002D8D6A /* Utilities.h */,
 				99445CA52C186FA5002D8D6A /* Constants.swift */,
 			);
@@ -134,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99445CA62C186FA5002D8D6A /* Constants.swift in Sources */,
+				991C56F62C18CFDF0045C1B6 /* CategoryKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

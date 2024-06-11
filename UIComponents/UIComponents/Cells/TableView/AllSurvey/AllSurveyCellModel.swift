@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import Utilities
 
 public protocol AllSurveyCellDataSource: AnyObject {
-    var title:String {get set}
+    var categoryKey:CategoryKeys {get set}
     var surveyImage: UIImage {get set}
     var subtitle:String {get set}
     var voterCount:Int {get set}
@@ -26,7 +27,7 @@ public protocol AllSurveyCellProtocol: AllSurveyCellDataSource, AllSurveyCellEve
 
 public final class AllSurveyCellModel: AllSurveyCellProtocol {
     
-    public var title: String
+    public var categoryKey: CategoryKeys
     
     public var surveyImage: UIImage
     
@@ -36,8 +37,8 @@ public final class AllSurveyCellModel: AllSurveyCellProtocol {
     
     public var voteCount: Int
     
-    public init(title: String, surveyImage: UIImage, subtitle: String, voterCount: Int, voteCount: Int) {
-        self.title = title
+    public init(categoryKey: CategoryKeys, surveyImage: UIImage, subtitle: String, voterCount: Int, voteCount: Int) {
+        self.categoryKey = categoryKey
         self.surveyImage = surveyImage
         self.subtitle = subtitle
         self.voterCount = voterCount

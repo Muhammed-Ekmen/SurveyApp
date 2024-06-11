@@ -18,12 +18,12 @@ class BaseNavigationController: UINavigationController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
     
     private func configureContents() {
         let attributed: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.white,
+            .foregroundColor: UIColor.black,
             .font:UIFont.systemFont(ofSize: 16, weight: .semibold)
         ]
         let appearance = UINavigationBarAppearance()
@@ -31,11 +31,11 @@ class BaseNavigationController: UINavigationController {
         backButtonAppearance.normal.titleTextAttributes = attributed
         
         appearance.backButtonAppearance = backButtonAppearance
-        appearance.backgroundColor = .black
+        appearance.backgroundColor = .white
         appearance.titleTextAttributes = attributed
         appearance.largeTitleTextAttributes = attributed
 
-        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance

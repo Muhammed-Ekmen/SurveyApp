@@ -103,7 +103,6 @@ extension HomeViewController{
     }
     
     private func reloadTableView() {
-        print("WORK")
         viewModel.reloadTableView = { [weak self] in
             guard let self = self else {return}
             allSurveyTableView.reloadData()

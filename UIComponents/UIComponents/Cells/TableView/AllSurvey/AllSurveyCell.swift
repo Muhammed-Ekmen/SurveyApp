@@ -125,7 +125,7 @@ public class AllSurveyCell: UITableViewCell, ReusableView {
         self.indexPath = indexPath
         self.viewModel = viewModel
         cellIcon.image = viewModel.surveyImage
-        titleLabel.text = viewModel.title
+        titleLabel.text = viewModel.categoryKey.getStringData()
         subtitleLabel.text = viewModel.subtitle
         voteLabel.text = "🚀 \(viewModel.voteCount)/\(viewModel.voterCount)"
         updatePercentage(voteCount: viewModel.voteCount, voterCount: viewModel.voterCount)
